@@ -11,7 +11,7 @@ import SwiftUI
 struct app_keycardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardFrontScreen()
         }
     }
 }
