@@ -12,18 +12,15 @@ struct CardFrontScreen: View {
         VStack {
             // Top Section
             VStack {
-                Rectangle()
-                    .fill(Color(red: 52.0/255.0, green: 52.0/255.0, blue: 52.0/255.0))
-                    .frame(width: 100, height: 15, alignment: .center)
-                    .cornerRadius(10.0)
+                NotchView()
+                    .padding()
                 
-                Image("profile")
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(maxHeight: 250)
+                CustomImageView(imageName: "profile",
+                                aspectRatio: 1,
+                                maxHeight: 250)
                     .clipShape(Circle())
+                    .padding()
             }
-            .padding()
             .frame(maxWidth: .infinity)
             .background(Color.red)
             .edgesIgnoringSafeArea(.all)
@@ -68,7 +65,7 @@ struct CardFrontScreen: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CardFrontScreen_Previews: PreviewProvider {
     static var previews: some View {
         CardFrontScreen()
     }

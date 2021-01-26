@@ -12,15 +12,12 @@ struct CardBackScreen: View {
         VStack {
             // Top Section
             VStack {
-                Rectangle()
-                    .fill(Color(red: 52.0/255.0, green: 52.0/255.0, blue: 52.0/255.0))
-                    .frame(width: 100, height: 15, alignment: .center)
-                    .cornerRadius(10.0)
+                NotchView()
+                    .padding()
                 
-                Image("barCode")
-                    .resizable()
-                    .aspectRatio(2.5, contentMode: .fit)
-                    .frame(maxHeight: 200)
+                CustomImageView(imageName: "barCode",
+                                aspectRatio: 2.5,
+                                maxHeight: 200)
                     .padding([.leading, .trailing])
             }
             
