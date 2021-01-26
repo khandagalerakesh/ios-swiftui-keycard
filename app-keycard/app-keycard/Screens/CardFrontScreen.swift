@@ -30,31 +30,35 @@ struct CardFrontScreen: View {
             // Bottom Section
             VStack {
                 HStack {
-                    Text("RAKESH")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text("KHANDAGALE")
-                        .font(.largeTitle)
-                        .fontWeight(.thin)
+                    CustomTextView(title: "RAKESH",
+                                   fontType: .title,
+                                   fontWeight: .bold,
+                                   textColor: .black)
+                    
+                    CustomTextView(title: "KHANDAGALE",
+                                   fontType: .largeTitle,
+                                   fontWeight: .thin,
+                                   textColor: .black)
                 }
-                .padding(.top, 25.0)
-                .padding(.bottom, 10.0)
+                .padding()
                 
-                Text("iOS DEVELOPER")
-                    .font(.subheadline)
-                    .fontWeight(.light)
+                CustomTextView(title: "iOS DEVELOPER",
+                               fontType: .subheadline,
+                               fontWeight: .light,
+                               textColor: .black)
                 
                 Spacer()
                 
                 HStack {
-                    Text("YOUR")
-                        .font(.title)
-                        .fontWeight(.bold)
+                    CustomTextView(title: "YOUR",
+                                   fontType: .title,
+                                   fontWeight: .bold,
+                                   textColor: .black)
                     
-                    Text("COMPANY")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.red)
+                    CustomTextView(title: "COMPANY",
+                                   fontType: .title,
+                                   fontWeight: .bold,
+                                   textColor: .red)
                 }
                 .padding()
             }

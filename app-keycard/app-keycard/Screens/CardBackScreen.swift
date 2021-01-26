@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CardBackScreen: View {
+    
+    // MARK:- Properties
+    let employeeInformation: [String : String] = ["NID": "1234567890",
+                                                  "PHONE": "+123 1234 567 890\n +012 345 678",
+                                                  "MAIL": "mymail@yourcompany.com",
+                                                  "BLOOD GROUP": "O+ (O Positive)"]
+    
     var body: some View {
         VStack {
             // Top Section

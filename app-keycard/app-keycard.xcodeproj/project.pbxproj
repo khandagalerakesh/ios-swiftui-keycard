@@ -14,6 +14,7 @@
 		819495E825C0B8FD00F3FB6E /* CardBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819495E725C0B8FD00F3FB6E /* CardBackScreen.swift */; };
 		819495EB25C0BE8200F3FB6E /* NotchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819495EA25C0BE8200F3FB6E /* NotchView.swift */; };
 		819495EE25C0BF5800F3FB6E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819495ED25C0BF5800F3FB6E /* CustomImageView.swift */; };
+		819495F125C0C84F00F3FB6E /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819495F025C0C84F00F3FB6E /* CustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		819495E725C0B8FD00F3FB6E /* CardBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackScreen.swift; sourceTree = "<group>"; };
 		819495EA25C0BE8200F3FB6E /* NotchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchView.swift; sourceTree = "<group>"; };
 		819495ED25C0BF5800F3FB6E /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		819495F025C0C84F00F3FB6E /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				819495EA25C0BE8200F3FB6E /* NotchView.swift */,
 				819495ED25C0BF5800F3FB6E /* CustomImageView.swift */,
+				819495F025C0C84F00F3FB6E /* CustomTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				819495E825C0B8FD00F3FB6E /* CardBackScreen.swift in Sources */,
 				819495EB25C0BE8200F3FB6E /* NotchView.swift in Sources */,
+				819495F125C0C84F00F3FB6E /* CustomTextView.swift in Sources */,
 				819495D725C0B78700F3FB6E /* CardFrontScreen.swift in Sources */,
 				819495D525C0B78700F3FB6E /* app_keycardApp.swift in Sources */,
 				819495EE25C0BF5800F3FB6E /* CustomImageView.swift in Sources */,
