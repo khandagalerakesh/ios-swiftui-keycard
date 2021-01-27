@@ -10,10 +10,10 @@ import SwiftUI
 struct CardBackScreen: View {
     
     // MARK:- Properties
-    let employeeInformation: [String : String] = ["NID": "1234567890",
-                                                  "PHONE": "+123 1234 567 890\n +012 345 678",
-                                                  "MAIL": "mymail@yourcompany.com",
-                                                  "BLOOD GROUP": "O+ (O Positive)"]
+    let employeeInformation = ["NID": "1234567890",
+                               "PHONE": "+123 1234 567 890\n +012 345 678",
+                               "MAIL": "mymail@yourcompany.com",
+                               "BLOOD GROUP": "O+ (O Positive)"]
     
     var body: some View {
         VStack {
@@ -29,66 +29,43 @@ struct CardBackScreen: View {
             }
             
             VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Text("NID: ")
-                        .font(.headline)
-                        .fontWeight(.light)
-                    Text("1234567890")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                }
-                
-                HStack {
-                    Text("PHONE: ")
-                        .font(.headline)
-                        .fontWeight(.light)
-                    Text("+123 1234 567 890\n +012 345 678")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                }
-                
-                HStack {
-                    Text("MAIL: ")
-                        .font(.headline)
-                        .fontWeight(.light)
-                    Text("mymail@yourcompany.com")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                }
-                
-                HStack {
-                    Text("BLOOD GROUP: ")
-                        .font(.headline)
-                        .fontWeight(.light)
-                    Text("O+ (O Positive)")
-                        .font(.headline)
-                        .fontWeight(.bold)
+                ForEach(employeeInformation.keys.sorted(), id: \.self) { key in
+                    HStack {
+                        CustomTextView(title: "\(key): ",
+                                       size: 18,
+                                       fontWeight: .light,
+                                       textColor: .black)
+                        
+                        CustomTextView(title: employeeInformation[key]!,
+                                       size: 18,
+                                       fontWeight: .bold,
+                                       textColor: .black)
+                    }
                 }
             }
             .padding(.bottom, 20)
             
-            VStack(alignment: .leading) {
-                Text("* IF THIS CARD IS FOUND, PLEASE INFORM *")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
-                    .padding(.bottom, 10)
-                
-                Text("Road #8, House #10\n5th Ave, New York\nNY, USA")
-                    .font(.body)
-                    .fontWeight(.medium)
+            VStack(alignment: .leading, spacing: 20) {
+                CustomTextView(title: "* IF THIS CARD IS FOUND, PLEASE INFORM *",
+                               size: 16,
+                               fontWeight: .bold,
+                               textColor: .red)
+                    
+                CustomTextView(title: "Road #8, House #10\n5th Ave, New York\nNY, USA",
+                               size: 18,
+                               fontWeight: .medium,
+                               textColor: .black)
             }
             
             Spacer()
             
-            Text("your.company.com")
-                .font(.headline)
-                .fontWeight(.bold)
+            CustomTextView(title: "your.company.com",
+                           size: 18,
+                           fontWeight: .bold,
+                           textColor: .black)
                 .multilineTextAlignment(.center)
-                .frame(minWidth: 0 , maxWidth: .infinity)
                 .padding()
         }
-        .padding([.leading, .trailing], 16.0)
     }
 }
 

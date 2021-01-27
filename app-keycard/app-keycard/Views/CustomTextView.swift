@@ -11,14 +11,13 @@ struct CustomTextView: View {
     
     // MARK:- Properties
     var title: String
-    var fontType: Font
+    var size: CGFloat
     var fontWeight: Font.Weight
     var textColor: Color
     
     var body: some View {
         Text(title)
-            .font(fontType)
-            .fontWeight(fontWeight)
+            .font(.system(size: size, weight: fontWeight, design: .default))
             .foregroundColor(textColor)
     }
 }

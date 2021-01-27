@@ -31,32 +31,32 @@ struct CardFrontScreen: View {
             VStack {
                 HStack {
                     CustomTextView(title: "RAKESH",
-                                   fontType: .title,
+                                   size: 28,
                                    fontWeight: .bold,
                                    textColor: .black)
                     
                     CustomTextView(title: "KHANDAGALE",
-                                   fontType: .largeTitle,
+                                   size: 32,
                                    fontWeight: .thin,
                                    textColor: .black)
                 }
-                .padding()
                 
                 CustomTextView(title: "iOS DEVELOPER",
-                               fontType: .subheadline,
+                               size: 22,
                                fontWeight: .light,
                                textColor: .black)
+                    .padding()
                 
                 Spacer()
                 
                 HStack {
                     CustomTextView(title: "YOUR",
-                                   fontType: .title,
+                                   size: 24,
                                    fontWeight: .bold,
                                    textColor: .black)
                     
                     CustomTextView(title: "COMPANY",
-                                   fontType: .title,
+                                   size: 24,
                                    fontWeight: .bold,
                                    textColor: .red)
                 }
